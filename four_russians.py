@@ -23,7 +23,7 @@ def partition_matrixes(matrixes):
 		new_matrix = []
 		while len(current_matrix) > 0:
 			divided_list = []
-			for x in xrange(0,division_size):
+			for x in range(0,division_size):
 				if len(current_matrix) > 0:
 					divided_list.append(current_matrix.pop(0))
 				else:
@@ -74,7 +74,7 @@ def create_list(row_size = 0, column_size = 0):
 				for x in range(row_size):
 					column = []
 					for z in range(column_size):
-						column.append(0)	
+						column.append(0)
 					row.append(column)
 			else:
 				row = []
@@ -84,7 +84,6 @@ def create_list(row_size = 0, column_size = 0):
 
 
 def row_from_bottom(matrix, row_index):
-	print(matrix)
 	return matrix[len(matrix) - (row_index + 1)]
 
 def add_boolean(matrix_1, matrix_2):
@@ -151,7 +150,6 @@ try:
 		length = length_check(matrix_dict)
 		partitioned_matrixes = partition_matrixes(matrix_dict)
 		matrixes_product = four_russians(matrixes_copy, partitioned_matrixes, length)
-		print(matrixes_product)
 	elif len(matrix_dict) == 1:
 		# raise Exception('Graph solution not yet implemented.')
 		length = len(matrix_dict['matrix_0']) + 1
