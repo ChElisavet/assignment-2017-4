@@ -149,3 +149,4 @@ for u in range(0,size):
     for y in  range(0,size):
       print("(",M[u][y],",",fin[u][y],") ",end="");
     print("")
+    
